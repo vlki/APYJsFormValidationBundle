@@ -109,7 +109,7 @@ var jsfv = new function () {
             jsfv.onEvent('{{ fieldName }}', 'blur', jsfv.check_{{ fieldName }});
 {% endfor %}
 {% endif %}
-        }
+        }{% if not loop.last %},{% endif %}
 {% endfor %}
     };
 }
